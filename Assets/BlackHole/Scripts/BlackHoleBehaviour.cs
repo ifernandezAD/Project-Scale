@@ -8,6 +8,9 @@ public class BlackHoleBehaviour : MonoBehaviour
     [Header("Absorption Variables")]
     [SerializeField] float absorptionRadius = 5f;
     [SerializeField] float growthFactor = 0.1f;
+
+    [SerializeField] float gravitationalPull = 10f; 
+    [SerializeField] float gravitationalRangeFactor = 2f;
     [SerializeField] LayerMask absorbableLayer;
     
 
@@ -27,15 +30,29 @@ public class BlackHoleBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, absorptionRadius);
     }
 
-    void AbsorbObjects()
+   void AbsorbObjects()
     {
-        Collider[] objectsToAbsorb = Physics.OverlapSphere(transform.position, absorptionRadius, absorbableLayer);
+        Collider[] objectsToAbsorb = Physics.OverlapSphere(transform.position, absorptionRadius * gravitationalRangeFactor, absorbableLayer);
 
         foreach (Collider obj in objectsToAbsorb)
         {
-            Destroy(obj.gameObject);
-            absorptionRadius += growthFactor;
-            UpdateBlackHoleSize();
+            Rigidbody rb = obj.GetComponent<Rigidbody>();
+
+            if (rb != null)
+            {
+                Vector3 directionToBlackHole = (transform.position - obj.transform.position).normalized;
+                float distanceToBlackHole = Vector3.Distance(transform.position, obj.transform.position);
+
+                float forceMagnitude = gravitationalPull / distanceToBlackHole;
+                rb.AddForce(directionToBlackHole * forceMagnitude, ForceMode.Acceleration);
+
+                if (distanceToBlackHole < absorptionRadius)
+                {
+                    Destroy(obj.gameObject);
+                    absorptionRadius += growthFactor;
+                    UpdateBlackHoleSize();
+                }
+            }
         }
     }
 
