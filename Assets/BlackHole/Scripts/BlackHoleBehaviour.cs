@@ -10,7 +10,8 @@ public class BlackHoleBehaviour : MonoBehaviour
     [SerializeField] float growthFactor = 0.1f;
 
     [SerializeField] float gravitationalPull = 10f; 
-    [SerializeField] float gravitationalRangeFactor = 2f;
+    [SerializeField] float gravitationalRange = 2f;
+    [SerializeField] float destructionDistanceThreshold = 0.5f;
     [SerializeField] LayerMask absorbableLayer;
     
 
@@ -32,7 +33,7 @@ public class BlackHoleBehaviour : MonoBehaviour
 
    void AbsorbObjects()
     {
-        Collider[] objectsToAbsorb = Physics.OverlapSphere(transform.position, absorptionRadius * gravitationalRangeFactor, absorbableLayer);
+        Collider[] objectsToAbsorb = Physics.OverlapSphere(transform.position, absorptionRadius * gravitationalRange, absorbableLayer);
 
         foreach (Collider obj in objectsToAbsorb)
         {
@@ -46,7 +47,7 @@ public class BlackHoleBehaviour : MonoBehaviour
                 float forceMagnitude = gravitationalPull / distanceToBlackHole;
                 rb.AddForce(directionToBlackHole * forceMagnitude, ForceMode.Acceleration);
 
-                if (distanceToBlackHole < absorptionRadius)
+                if (distanceToBlackHole < destructionDistanceThreshold)
                 {
                     Destroy(obj.gameObject);
                     absorptionRadius += growthFactor;
