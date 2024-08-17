@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4152309804834154311}
+  - component: {fileID: 4948954675065076856}
   m_Layer: 0
   m_Name: BlackHole
   m_TagString: Untagged
@@ -32,6 +33,24 @@ Transform:
   - {fileID: 9017753131446441613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4948954675065076856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4255790423579929520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4360ec573d0717479ef30bfc7e76f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackHoleVisual: {fileID: 3801931724797503657}
+  absorptionRadius: 5
+  growthFactor: 0.1
+  absorbableLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &5015898250780250058
 GameObject:
   m_ObjectHideFlags: 0
