@@ -6,7 +6,6 @@ public class GameLogic : MonoBehaviour
 
     [Header("Cursor Settings")]
     [SerializeField] private bool hideCursorOnStart = true; 
-    [SerializeField] private bool enableCursorControl = true; 
 
     void Awake()
     {
