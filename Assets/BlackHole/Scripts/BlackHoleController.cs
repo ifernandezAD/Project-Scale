@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Cinemachine;
+using DG.Tweening;
 
 [RequireComponent(typeof(Rigidbody))]
 public class BlackHoleController : MonoBehaviour
@@ -17,11 +18,14 @@ public class BlackHoleController : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 100f;
     [SerializeField] private float zoomSensitivity = 10f;
     [SerializeField] private float minFOV = 20f;
-    [SerializeField] private float maxFOV = 60f;
+    [SerializeField] private float maxFOV = 100f;
+    [SerializeField] private float zoomDuration = 0.5f;
 
     private Rigidbody rb;
     private Vector2 moveInput;
     private float verticalInput;
+    private float targetFOV;
+
 
     private void Awake()
     {
@@ -37,6 +41,11 @@ public class BlackHoleController : MonoBehaviour
         verticalMove.action.Enable();
         verticalMove.action.performed += OnAscendDescendInput;
         verticalMove.action.canceled += OnAscendDescendInput;
+    }
+
+    void Start()
+    {
+        targetFOV = virtualCamera.Lens.FieldOfView;
     }
 
     private void Update()
@@ -62,21 +71,18 @@ public class BlackHoleController : MonoBehaviour
 
     private void Move()
     {
-        // Movimiento horizontal basado en la dirección de la cámara (ignora la inclinación vertical de la cámara)
         Vector3 forwardMovement = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z) * moveInput.y;
         Vector3 strafeMovement = cameraTransform.right * moveInput.x;
         Vector3 movementDirection = (forwardMovement + strafeMovement).normalized;
 
-        // Aplica la fuerza para movimiento horizontal
         rb.AddForce(movementDirection * moveSpeed, ForceMode.Acceleration);
 
-        // Aplica la fuerza para movimiento vertical solo cuando se presiona Q o E
+
         if (verticalInput != 0)
         {
             rb.AddForce(Vector3.up * verticalInput * moveSpeed, ForceMode.Acceleration);
         }
 
-        // Aplica la resistencia (drag)
         rb.linearVelocity *= 1f - (drag * Time.fixedDeltaTime);
     }
 
@@ -85,21 +91,23 @@ public class BlackHoleController : MonoBehaviour
         float mouseX = Mouse.current.delta.x.ReadValue() * mouseSensitivity * Time.deltaTime;
         float mouseY = Mouse.current.delta.y.ReadValue() * mouseSensitivity * Time.deltaTime;
 
-        // Rotar el objeto (agujero negro) solo en el eje Y (horizontal)
         transform.Rotate(Vector3.up * mouseX);
 
-        // Inclina la cámara hacia arriba o hacia abajo
         cameraTransform.Rotate(Vector3.left * mouseY);
     }
-
     private void HandleCameraZoom()
     {
         float scrollInput = Mouse.current.scroll.ReadValue().y;
 
         if (virtualCamera != null)
         {
-            float newFOV = virtualCamera.Lens.FieldOfView - scrollInput * zoomSensitivity;
-            virtualCamera.Lens.FieldOfView = Mathf.Clamp(newFOV, minFOV, maxFOV);
+            float newFOV = Mathf.Clamp(targetFOV - scrollInput * zoomSensitivity, minFOV, maxFOV);
+
+            if (Mathf.Abs(newFOV - virtualCamera.Lens.FieldOfView) > Mathf.Epsilon)
+            {
+                DOTween.To(() => virtualCamera.Lens.FieldOfView, x => virtualCamera.Lens.FieldOfView = x, newFOV, zoomDuration);
+                targetFOV = newFOV;
+            }
         }
     }
 
