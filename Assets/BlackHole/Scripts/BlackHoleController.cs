@@ -7,6 +7,7 @@ public class BlackHoleController : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private InputActionReference move;
+    [SerializeField] private InputActionReference verticalMove;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float drag = 1f;
 
@@ -21,6 +22,7 @@ public class BlackHoleController : MonoBehaviour
     [Header("References")]
     private Rigidbody rb;
     private Vector2 moveInput;
+    private float verticalInput;
 
     private void Awake()
     {
@@ -32,6 +34,10 @@ public class BlackHoleController : MonoBehaviour
         move.action.Enable();
         move.action.performed += OnMoveInput;
         move.action.canceled += OnMoveInput;
+
+        verticalMove.action.Enable();
+        verticalMove.action.performed += OnAscendDescendInput;
+        verticalMove.action.canceled += OnAscendDescendInput;
     }
 
     private void Update()
@@ -49,6 +55,10 @@ public class BlackHoleController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
     }
+     private void OnAscendDescendInput(InputAction.CallbackContext context)
+    {
+        verticalInput = context.ReadValue<float>();
+    }
 
     private void Move()
     {
@@ -61,7 +71,7 @@ public class BlackHoleController : MonoBehaviour
 
 
         rb.AddForce(movementDirection * moveSpeed, ForceMode.Acceleration);
-
+        rb.AddForce(Vector3.up * verticalInput * moveSpeed, ForceMode.Acceleration);
 
         rb.linearVelocity *= 1f - (drag * Time.fixedDeltaTime);
     }
@@ -92,6 +102,10 @@ public class BlackHoleController : MonoBehaviour
         move.action.Disable();
         move.action.performed -= OnMoveInput;
         move.action.canceled -= OnMoveInput;
+
+        verticalMove.action.Disable();
+        verticalMove.action.performed -= OnAscendDescendInput;
+        verticalMove.action.canceled -= OnAscendDescendInput;
     }
 
 }
