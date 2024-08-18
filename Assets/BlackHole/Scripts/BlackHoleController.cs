@@ -19,7 +19,6 @@ public class BlackHoleController : MonoBehaviour
     [SerializeField] private float minFOV = 20f;
     [SerializeField] private float maxFOV = 60f;
 
-    [Header("References")]
     private Rigidbody rb;
     private Vector2 moveInput;
     private float verticalInput;
@@ -55,24 +54,29 @@ public class BlackHoleController : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
     }
-     private void OnAscendDescendInput(InputAction.CallbackContext context)
+
+    private void OnAscendDescendInput(InputAction.CallbackContext context)
     {
         verticalInput = context.ReadValue<float>();
     }
 
     private void Move()
     {
-
-        Vector3 forwardMovement = cameraTransform.forward * moveInput.y;
+        // Movimiento horizontal basado en la dirección de la cámara (ignora la inclinación vertical de la cámara)
+        Vector3 forwardMovement = new Vector3(cameraTransform.forward.x, 0, cameraTransform.forward.z) * moveInput.y;
         Vector3 strafeMovement = cameraTransform.right * moveInput.x;
-
-
         Vector3 movementDirection = (forwardMovement + strafeMovement).normalized;
 
-
+        // Aplica la fuerza para movimiento horizontal
         rb.AddForce(movementDirection * moveSpeed, ForceMode.Acceleration);
-        rb.AddForce(Vector3.up * verticalInput * moveSpeed, ForceMode.Acceleration);
 
+        // Aplica la fuerza para movimiento vertical solo cuando se presiona Q o E
+        if (verticalInput != 0)
+        {
+            rb.AddForce(Vector3.up * verticalInput * moveSpeed, ForceMode.Acceleration);
+        }
+
+        // Aplica la resistencia (drag)
         rb.linearVelocity *= 1f - (drag * Time.fixedDeltaTime);
     }
 
@@ -81,11 +85,13 @@ public class BlackHoleController : MonoBehaviour
         float mouseX = Mouse.current.delta.x.ReadValue() * mouseSensitivity * Time.deltaTime;
         float mouseY = Mouse.current.delta.y.ReadValue() * mouseSensitivity * Time.deltaTime;
 
-
+        // Rotar el objeto (agujero negro) solo en el eje Y (horizontal)
         transform.Rotate(Vector3.up * mouseX);
 
+        // Inclina la cámara hacia arriba o hacia abajo
         cameraTransform.Rotate(Vector3.left * mouseY);
     }
+
     private void HandleCameraZoom()
     {
         float scrollInput = Mouse.current.scroll.ReadValue().y;
@@ -107,5 +113,4 @@ public class BlackHoleController : MonoBehaviour
         verticalMove.action.performed -= OnAscendDescendInput;
         verticalMove.action.canceled -= OnAscendDescendInput;
     }
-
 }

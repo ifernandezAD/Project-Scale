@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2153264750911943603}
   - component: {fileID: 7406375570638275912}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: BlackHoleVirtualCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,11 +146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  verticalMove: {fileID: -1931459824176301793, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   moveSpeed: 5
-  turnSpeed: 2
   drag: 1
-  mouseSensitivity: 100
   cameraTransform: {fileID: 2153264750911943603}
+  virtualCamera: {fileID: 7406375570638275912}
+  mouseSensitivity: 100
+  zoomSensitivity: 10
+  minFOV: 20
+  maxFOV: 100
 --- !u!54 &4790801908232813267
 Rigidbody:
   m_ObjectHideFlags: 0
