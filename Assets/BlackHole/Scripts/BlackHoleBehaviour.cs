@@ -8,13 +8,13 @@ public class BlackHoleBehaviour : MonoBehaviour
     [Header("Absorption Variables")]
     [SerializeField] float absorptionRadius = 5f;
     [SerializeField] float growthFactor = 0.1f;
-    [SerializeField] float gravitationalPull = 10f; 
+    [SerializeField] float gravitationalPull = 10f;
     [SerializeField] float gravitationalRange = 2f;
     [SerializeField] float destructionDistanceThreshold = 0.5f;
     [SerializeField] LayerMask absorbableLayer;
-    
+
     [Header("Scaling Factors")]
-    [SerializeField] float rangeGrowthFactor = 0.1f;  
+    [SerializeField] float rangeGrowthFactor = 0.1f;
 
     private float initialRadius;
 
@@ -46,6 +46,8 @@ public class BlackHoleBehaviour : MonoBehaviour
 
             if (rb != null)
             {
+                rb.constraints = RigidbodyConstraints.None;
+
                 Vector3 directionToBlackHole = (transform.position - obj.transform.position).normalized;
                 float distanceToBlackHole = Vector3.Distance(transform.position, obj.transform.position);
 
@@ -67,7 +69,7 @@ public class BlackHoleBehaviour : MonoBehaviour
     {
         if (blackHoleVisual != null)
         {
-            blackHoleVisual.localScale = Vector3.one * absorptionRadius * 0.2f; 
+            blackHoleVisual.localScale = Vector3.one * absorptionRadius * 0.2f;
         }
     }
 }
