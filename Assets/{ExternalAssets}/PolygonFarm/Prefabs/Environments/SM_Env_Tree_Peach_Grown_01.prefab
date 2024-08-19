@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 23103968603688008}
   - component: {fileID: 64515855187810532}
   - component: {fileID: 64578562509177104}
-  m_Layer: 0
+  - component: {fileID: 1742480864464201292}
+  m_Layer: 3
   m_Name: SM_Env_Tree_Peach_Grown_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,3 +133,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43748403099938064, guid: 46cadce828c62fa4590a4a4c4675f782, type: 2}
+--- !u!54 &1742480864464201292
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738070637598736}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
