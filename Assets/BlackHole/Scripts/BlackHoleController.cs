@@ -62,6 +62,17 @@ public class BlackHoleController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        PreventSinking();
+    }
+
+       private void PreventSinking()
+    {    
+        if (transform.position.y < 1)
+        {
+            Vector3 correctedPosition = transform.position;
+            correctedPosition.y = 1;
+            transform.position = correctedPosition;
+        }
     }
 
     private void OnMoveInput(InputAction.CallbackContext context)
