@@ -29,7 +29,7 @@ public class BlackHoleBehaviour : MonoBehaviour
         UpdateBlackHoleSize();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         AbsorbObjects();
     }
@@ -51,7 +51,6 @@ public class BlackHoleBehaviour : MonoBehaviour
 
             if (rb != null)
             {
-
                 rb.constraints = RigidbodyConstraints.None;
 
                 Vector3 directionToBlackHole = (transform.position - obj.transform.position).normalized;
@@ -90,4 +89,3 @@ public class BlackHoleBehaviour : MonoBehaviour
         onRadiusGrowth?.Invoke(absorptionRadius);
     }
 }
-

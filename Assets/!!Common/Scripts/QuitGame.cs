@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class QuitGame : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Update() { UpdateEscapeGame(); }
+
+    private void UpdateEscapeGame()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
