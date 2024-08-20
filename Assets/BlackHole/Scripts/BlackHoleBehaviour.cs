@@ -20,7 +20,8 @@ public class BlackHoleBehaviour : MonoBehaviour
     [SerializeField] float rangeGrowthFactor = 0.1f;
 
     private float initialRadius;
-    private bool hasThresholdEventTriggered = false;
+    private int lastThreshold = 0;
+
     void Start()
     {
         initialRadius = absorptionRadius;
@@ -76,10 +77,13 @@ public class BlackHoleBehaviour : MonoBehaviour
             blackHoleVisual.localScale = Vector3.one * absorptionRadius * 0.2f;
         }
 
-        if (absorptionRadius >= 10f && !hasThresholdEventTriggered)
+        int currentThreshold = Mathf.FloorToInt(absorptionRadius / 10f) * 10;
+
+        if (currentThreshold > lastThreshold)
         {
-            onRadiusThreshold?.Invoke(); 
-            hasThresholdEventTriggered = true; 
+            Debug.Log($"Absorption Radius reached {currentThreshold} meters");
+            onRadiusThreshold?.Invoke();
+            lastThreshold = currentThreshold;
         }
     }
 }

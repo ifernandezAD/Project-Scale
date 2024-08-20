@@ -21,11 +21,13 @@ public class BlackHoleController : MonoBehaviour
     [SerializeField] private float maxFOV = 100f;
     [SerializeField] private float zoomDuration = 0.5f;
 
+    private float initialCameraLocalZ;
+    private int thresholdCount = 0;
+
     private Rigidbody rb;
     private Vector2 moveInput;
     private float verticalInput;
     private float targetFOV;
-
 
     private void Awake()
     {
@@ -48,6 +50,7 @@ public class BlackHoleController : MonoBehaviour
     void Start()
     {
         targetFOV = virtualCamera.Lens.FieldOfView;
+        initialCameraLocalZ = virtualCamera.transform.localPosition.z; 
     }
 
     private void Update()
@@ -79,7 +82,6 @@ public class BlackHoleController : MonoBehaviour
 
         rb.AddForce(movementDirection * moveSpeed, ForceMode.Acceleration);
 
-
         if (verticalInput != 0)
         {
             rb.AddForce(Vector3.up * verticalInput * moveSpeed, ForceMode.Acceleration);
@@ -94,9 +96,9 @@ public class BlackHoleController : MonoBehaviour
         float mouseY = Mouse.current.delta.y.ReadValue() * mouseSensitivity * Time.deltaTime;
 
         transform.Rotate(Vector3.up * mouseX);
-
         cameraTransform.Rotate(Vector3.left * mouseY);
     }
+
     private void HandleCameraZoom()
     {
         float scrollInput = Mouse.current.scroll.ReadValue().y;
@@ -113,15 +115,17 @@ public class BlackHoleController : MonoBehaviour
         }
     }
 
-    void UpdateCameraZ()
+  void UpdateCameraZ()
     {
         if (virtualCamera != null)
         {
-            Vector3 currentCameraPosition = virtualCamera.transform.position;
-            currentCameraPosition.z -= 5f;
-            virtualCamera.transform.position = currentCameraPosition;
+            thresholdCount++;
+            float newCameraLocalZ = initialCameraLocalZ - (5f * thresholdCount);
 
-            //virtualCamera.transform.DOMoveZ(currentCameraPosition.z - 5f, 0.5f); 
+            Debug.Log($"Threshold Count: {thresholdCount}, New Camera Local Z: {newCameraLocalZ}");
+
+            
+            virtualCamera.transform.DOLocalMoveZ(newCameraLocalZ, 0.5f);
         }
     }
 
