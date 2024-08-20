@@ -210,23 +210,19 @@ MonoBehaviour:
   dialogueText: {fileID: 1069099358}
   dialogueLines:
   - '[Well, well, well... Would you look at that! The Void is stuffed, and the farm?
-    Gone without a trace. You really outdid yourself, cosmic gourmand!]
-
-    
-
-'
+    Gone without a trace. You really outdid yourself, cosmic gourmand!]'
   - "[I mean, who knew swallowing an entire farm could be so... satisfying? The trees,
     the crops, the barn\u2014poof! Gone, like they never existed. A true culinary
-    masterpiece.]\r\n"
+    masterpiece.]\r"
   - "[The Void burps in satisfaction. What? It\u2019s a compliment where we come
-    from. Trust me, it\u2019s not easy to impress an endless, all-consuming abyss.]\r\n\r\n"
+    from. Trust me, it\u2019s not easy to impress an endless, all-consuming abyss.]"
   - "[You\u2019ve successfully completed your mission, and the universe is now just
     a little bit emptier. Congratulations, you\u2019ve proven yourself as a true
-    connoisseur of chaos.]\r\n"
+    connoisseur of chaos.]"
   - "[But alas, all good things must come to an end. And so, it\u2019s time for you
-    to exit this plane of existence... or at least, exit the game. Thanks for playing!]\r\n\n"
+    to exit this plane of existence... or at least, exit the game. Thanks for playing!]"
   - "[Don\u2019t worry, the Void will be here if you ever want to feed it again.
-    Until then, farewell, and may your cosmic appetite never wane!]\r\n\n\n"
+    Until then, farewell, and may your cosmic appetite never wane!]\n"
   typingSpeed: 0.05
 --- !u!1 &425224625
 GameObject:
@@ -475,11 +471,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
+  m_fontSize: 72
   m_fontSizeBase: 45
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -513,7 +509,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -401.95618, y: -42.931274, z: -398.79675, w: -55.061874}
+  m_margin: {x: -448.07263, y: -69.6962, z: -445.29858, w: -76.89552}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

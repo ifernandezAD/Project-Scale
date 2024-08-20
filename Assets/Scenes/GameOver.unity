@@ -215,19 +215,16 @@ MonoBehaviour:
 '
   - "[The farm is still standing, mocking us with its untouched crops and livestock.
     You had one job\u2014ONE JOB\u2014and now we\u2019re left with a ravenous Void
-    and nothing to show for it.]\r\n\r\n"
+    and nothing to show for it.]"
   - '[How hard is it to devour a simple farm? The Void demands consumption, not excuses.
-    But here we are, empty-handed and embarrassed.]
-
-
-'
+    But here we are, empty-handed and embarrassed.]'
   - "[The Void is displeased. If it could frown, it would. You\u2019ve let down an
     endless abyss, and that\u2019s no small feat. Congratulations, you\u2019ve achieved
-    a new low.]\r\n\n"
+    a new low.]"
   - "[No cosmic burp of satisfaction for you, just the cold, empty silence of failure.
     The universe remains full, and that\u2019s entirely your fault.]\r\n\n"
   - "[Maybe next time, you\u2019ll manage to feed the Void properly. But for now,
-    you\u2019re dismissed. Try not to fail so spectacularly next time.]\r\n\r\n\n"
+    you\u2019re dismissed. Try not to fail so spectacularly next time.]"
   typingSpeed: 0.05
 --- !u!1 &425224625
 GameObject:
@@ -476,11 +473,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
+  m_fontSize: 72
   m_fontSizeBase: 45
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 12
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -514,7 +511,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -401.95618, y: -42.931274, z: -398.79675, w: -55.061874}
+  m_margin: {x: -450.79053, y: -67.01941, z: -453.47388, w: -79.625595}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

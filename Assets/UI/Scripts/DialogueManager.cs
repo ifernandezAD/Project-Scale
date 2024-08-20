@@ -27,9 +27,18 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isTyping)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            AdvanceDialogue();
+            if (isTyping)
+            {
+                StopAllCoroutines();
+                dialogueText.text = dialogueLines[currentLineIndex];
+                isTyping = false;
+            }
+            else
+            {
+                AdvanceDialogue();
+            }
         }
     }
 
@@ -64,7 +73,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueText.text = "";  
 
-        
         if (SceneManager.GetActiveScene().name == "Menu")
         {
             SceneManager.LoadScene("Level1");
@@ -75,4 +83,3 @@ public class DialogueManager : MonoBehaviour
         }
     }
 }
-

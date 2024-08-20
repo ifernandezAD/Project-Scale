@@ -217,25 +217,19 @@ MonoBehaviour:
     today. And when the Void is hungry, well... things tend to disappear.]\r\n"
   - "[Today\u2019s menu? A nice, juicy farm. Whose farm, you ask? Does it really
     matter? The Void\u2019s appetite is indiscriminate. Think of it as a cosmic recycling
-    effort!]\r\n"
+    effort!]\r"
   - "[Your mission, should you choose to accept it (not that you have a choice),
     is to feed the Void. You must grow the Black Hole to a certain size in under
-    3 minutes. That\u2019s 180 seconds, if you prefer.]\r\n\r\n"
+    3 minutes. That\u2019s 180 seconds, if you prefer.]"
   - '[How, you ask? Simple! Use the WASD keys to move around. Think of them as the
     cosmic joystick. The Q and E keys? Those are for ascending and descending, because
-    even the Void enjoys a little verticality.]
-
-    
-
-    
-
-'
+    even the Void enjoys a little verticality.]'
   - "[Just remember, time is ticking. If the Black Hole doesn\u2019t grow big enough
-    in time... well, let's just say it won\u2019t be the farm that disappears next.]\r\n\n\r\n"
+    in time... well, let's just say it won\u2019t be the farm that disappears next.]"
   - "[Just remember, time is ticking. If the Black Hole doesn\u2019t grow big enough
-    in time... well, let's just say it won\u2019t be the farm that disappears next.]\r\n\n\r\n"
+    in time... well, let's just say it won\u2019t be the farm that disappears next.]"
   - "[So, get ready. Make the Void proud. Or don\u2019t. Either way, it\u2019ll be
-    entertaining. Now, press spacebar and let\u2019s get started!]\r\n\n\r\n"
+    entertaining. Now, press spacebar and let\u2019s get started!]"
   typingSpeed: 0.05
 --- !u!1 &425224625
 GameObject:
@@ -484,11 +478,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
+  m_fontSize: 72
   m_fontSizeBase: 45
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 1
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -522,7 +516,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -401.95618, y: -42.931274, z: -398.79675, w: -55.061874}
+  m_margin: {x: -446.6145, y: -69.85065, z: -448.5337, w: -80.052704}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
