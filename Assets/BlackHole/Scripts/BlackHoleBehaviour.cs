@@ -4,6 +4,7 @@ using UnityEngine;
 public class BlackHoleBehaviour : MonoBehaviour
 {
     public static Action onRadiusThreshold;
+    public static Action<float> onRadiusGrowth;
 
     [Header("References")]
     [SerializeField] Transform blackHoleVisual;
@@ -85,6 +86,8 @@ public class BlackHoleBehaviour : MonoBehaviour
             onRadiusThreshold?.Invoke();
             lastThreshold = currentThreshold;
         }
+
+        onRadiusGrowth?.Invoke(absorptionRadius);
     }
 }
 
