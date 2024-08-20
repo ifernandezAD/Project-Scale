@@ -41,6 +41,8 @@ public class BlackHoleController : MonoBehaviour
         verticalMove.action.Enable();
         verticalMove.action.performed += OnAscendDescendInput;
         verticalMove.action.canceled += OnAscendDescendInput;
+
+        BlackHoleBehaviour.onRadiusThreshold += UpdateCameraZ;
     }
 
     void Start()
@@ -111,6 +113,18 @@ public class BlackHoleController : MonoBehaviour
         }
     }
 
+    void UpdateCameraZ()
+    {
+        if (virtualCamera != null)
+        {
+            Vector3 currentCameraPosition = virtualCamera.transform.position;
+            currentCameraPosition.z -= 5f;
+            virtualCamera.transform.position = currentCameraPosition;
+
+            //virtualCamera.transform.DOMoveZ(currentCameraPosition.z - 5f, 0.5f); 
+        }
+    }
+
     private void OnDisable()
     {
         move.action.Disable();
@@ -120,5 +134,7 @@ public class BlackHoleController : MonoBehaviour
         verticalMove.action.Disable();
         verticalMove.action.performed -= OnAscendDescendInput;
         verticalMove.action.canceled -= OnAscendDescendInput;
+
+        BlackHoleBehaviour.onRadiusThreshold -= UpdateCameraZ;
     }
 }

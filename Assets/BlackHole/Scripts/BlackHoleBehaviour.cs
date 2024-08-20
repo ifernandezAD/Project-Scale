@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class BlackHoleBehaviour : MonoBehaviour
 {
+    public static Action onRadiusThreshold;
+
     [Header("References")]
     [SerializeField] Transform blackHoleVisual;
 
@@ -17,7 +20,7 @@ public class BlackHoleBehaviour : MonoBehaviour
     [SerializeField] float rangeGrowthFactor = 0.1f;
 
     private float initialRadius;
-
+    private bool hasThresholdEventTriggered = false;
     void Start()
     {
         initialRadius = absorptionRadius;
@@ -72,5 +75,12 @@ public class BlackHoleBehaviour : MonoBehaviour
         {
             blackHoleVisual.localScale = Vector3.one * absorptionRadius * 0.2f;
         }
+
+        if (absorptionRadius >= 10f && !hasThresholdEventTriggered)
+        {
+            onRadiusThreshold?.Invoke(); 
+            hasThresholdEventTriggered = true; 
+        }
     }
 }
+
