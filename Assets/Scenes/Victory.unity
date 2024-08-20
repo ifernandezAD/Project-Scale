@@ -209,33 +209,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1069099358}
   dialogueLines:
-  - "[Press the spacebar to advance through the dialogue. Trust me, it\u2019s going
-    to be worth it.]\r\n"
-  - "[Ah, finally! A fresh mind to torment\u2014err, guide. Welcome, traveler, to
-    the infinite void. Don\u2019t worry, it\u2019s not as empty as it looks... yet.]\r\n"
-  - "[You see, there\u2019s a bit of a problem. The Void is feeling rather peckish
-    today. And when the Void is hungry, well... things tend to disappear.]\r\n"
-  - "[Today\u2019s menu? A nice, juicy farm. Whose farm, you ask? Does it really
-    matter? The Void\u2019s appetite is indiscriminate. Think of it as a cosmic recycling
-    effort!]\r\n"
-  - "[Your mission, should you choose to accept it (not that you have a choice),
-    is to feed the Void. You must grow the Black Hole to a certain size in under
-    3 minutes. That\u2019s 180 seconds, if you prefer.]\r\n\r\n"
-  - '[How, you ask? Simple! Use the WASD keys to move around. Think of them as the
-    cosmic joystick. The Q and E keys? Those are for ascending and descending, because
-    even the Void enjoys a little verticality.]
-
-    
+  - '[Well, well, well... Would you look at that! The Void is stuffed, and the farm?
+    Gone without a trace. You really outdid yourself, cosmic gourmand!]
 
     
 
 '
-  - "[Just remember, time is ticking. If the Black Hole doesn\u2019t grow big enough
-    in time... well, let's just say it won\u2019t be the farm that disappears next.]\r\n\n\r\n"
-  - "[Just remember, time is ticking. If the Black Hole doesn\u2019t grow big enough
-    in time... well, let's just say it won\u2019t be the farm that disappears next.]\r\n\n\r\n"
-  - "[So, get ready. Make the Void proud. Or don\u2019t. Either way, it\u2019ll be
-    entertaining. Now, press spacebar and let\u2019s get started!]\r\n\n\r\n"
+  - "[I mean, who knew swallowing an entire farm could be so... satisfying? The trees,
+    the crops, the barn\u2014poof! Gone, like they never existed. A true culinary
+    masterpiece.]\r\n"
+  - "[The Void burps in satisfaction. What? It\u2019s a compliment where we come
+    from. Trust me, it\u2019s not easy to impress an endless, all-consuming abyss.]\r\n\r\n"
+  - "[You\u2019ve successfully completed your mission, and the universe is now just
+    a little bit emptier. Congratulations, you\u2019ve proven yourself as a true
+    connoisseur of chaos.]\r\n"
+  - "[But alas, all good things must come to an end. And so, it\u2019s time for you
+    to exit this plane of existence... or at least, exit the game. Thanks for playing!]\r\n\n"
+  - "[Don\u2019t worry, the Void will be here if you ever want to feed it again.
+    Until then, farewell, and may your cosmic appetite never wane!]\r\n\n\n"
   typingSpeed: 0.05
 --- !u!1 &425224625
 GameObject:
