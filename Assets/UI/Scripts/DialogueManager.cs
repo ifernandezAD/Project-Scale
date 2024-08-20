@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     [Header("UI Elements")]
-    [SerializeField] private TextMeshProUGUI dialogueText;  
+    [SerializeField] private TextMeshProUGUI dialogueText;
 
     [Header("Dialogue Settings")]
     [TextArea(3, 10)]
-    public string[] dialogueLines;  
+    public string[] dialogueLines;
     private int currentLineIndex = 0;
 
-    [SerializeField] private float typingSpeed = 0.05f;  
+    [SerializeField] private float typingSpeed = 0.05f;
 
     private bool isTyping = false;
 
@@ -64,7 +64,15 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueText.text = "";  
 
-        SceneManager.LoadScene("Level1");
+        
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            SceneManager.LoadScene("Level1");
+        }
+        else
+        {
+            Application.Quit();
+        }
     }
 }
 
