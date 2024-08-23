@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33582072695611182}
   - component: {fileID: 23789261059330998}
   - component: {fileID: 5413003872479823383}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SM_Env_Vege_Rows_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.400119, y: 0.25698817, z: 4.4950304}
   m_Center: {x: -2.509799, y: 0.20960641, z: 2.4761958}

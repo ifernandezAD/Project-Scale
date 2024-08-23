@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4592984752409552}
   - component: {fileID: 33113534890413562}
   - component: {fileID: 23303467400704366}
-  - component: {fileID: 64156437487437430}
-  - component: {fileID: 7662817978333545296}
+  - component: {fileID: 7742025953871377525}
   m_Layer: 3
   m_Name: SM_Prop_Sign_Potatoes_01
   m_TagString: Untagged
@@ -88,8 +87,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64156437487437430
-MeshCollider:
+--- !u!65 &7742025953871377525
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -106,34 +105,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43931124227690640, guid: 16333c318b3e2574c828853897d9902e, type: 2}
---- !u!54 &7662817978333545296
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361436515152836}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  serializedVersion: 3
+  m_Size: {x: 0.8686906, y: 0.2831456, z: 0.024082107}
+  m_Center: {x: 0, y: 0.1415728, z: 0.012041072}

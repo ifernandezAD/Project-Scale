@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4825856277070036}
   - component: {fileID: 33694014091861994}
   - component: {fileID: 23221228913212680}
-  - component: {fileID: 64728622162392612}
-  - component: {fileID: 3655151001225489898}
+  - component: {fileID: 2227291981120898708}
   m_Layer: 3
   m_Name: SM_Prop_Windfarm_01
   m_TagString: Untagged
@@ -89,8 +88,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64728622162392612
-MeshCollider:
+--- !u!65 &2227291981120898708
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,37 +106,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43922838424591238, guid: 3db2d5d1a6f17204684ec4b8de318849, type: 2}
---- !u!54 &3655151001225489898
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302288334142274}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  serializedVersion: 3
+  m_Size: {x: 5.391205, y: 65.816086, z: 8.30008}
+  m_Center: {x: 0, y: 32.2873, z: -1.4544348}
 --- !u!1 &1697111367775364
 GameObject:
   m_ObjectHideFlags: 0

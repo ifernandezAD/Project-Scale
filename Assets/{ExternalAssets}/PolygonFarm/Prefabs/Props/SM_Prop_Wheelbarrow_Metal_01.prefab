@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4116763267390986}
   - component: {fileID: 33587634494591154}
   - component: {fileID: 23919251550357834}
-  - component: {fileID: 64863615561543728}
-  - component: {fileID: 5983691220801267360}
+  - component: {fileID: -6322423323274383244}
   m_Layer: 3
   m_Name: SM_Prop_Wheelbarrow_Metal_01
   m_TagString: Untagged
@@ -89,8 +88,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64863615561543728
-MeshCollider:
+--- !u!65 &-6322423323274383244
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,37 +106,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43033734200939010, guid: c8e6500bece92bf4981efa23b632afd6, type: 2}
---- !u!54 &5983691220801267360
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378312271168560}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  serializedVersion: 3
+  m_Size: {x: 0.6867965, y: 0.9838355, z: 1.9312303}
+  m_Center: {x: -0.007611543, y: 0.3466545, z: -0.51607215}
 --- !u!1 &1869146045657186
 GameObject:
   m_ObjectHideFlags: 0

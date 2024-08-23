@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 4510699595906150}
   - component: {fileID: 33581601959693764}
   - component: {fileID: 23193492816010706}
-  - component: {fileID: 64864084837472010}
   - component: {fileID: 64934148178838256}
-  - component: {fileID: -1382775800611618541}
+  - component: {fileID: -1056300151725301570}
   m_Layer: 3
   m_Name: SM_Prop_Bed_01
   m_TagString: Untagged
@@ -89,28 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64864084837472010
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093444153961494}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43548880809866724, guid: fd3fae0f2734ed74882575ea16050f41, type: 2}
 --- !u!64 &64934148178838256
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -133,30 +110,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43183403864043000, guid: fd3fae0f2734ed74882575ea16050f41, type: 2}
---- !u!54 &-1382775800611618541
-Rigidbody:
+--- !u!65 &-1056300151725301570
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093444153961494}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0818863, y: 1.5169874, z: 2.6732087}
+  m_Center: {x: 0, y: 0.7584937, z: -0.00000023841858}

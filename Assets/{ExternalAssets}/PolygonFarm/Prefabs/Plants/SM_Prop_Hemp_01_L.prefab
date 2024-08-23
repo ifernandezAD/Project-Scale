@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33399765782829330}
   - component: {fileID: 23576487066447662}
   - component: {fileID: 120267684580174572}
-  - component: {fileID: 2550548821203362416}
   m_Layer: 3
   m_Name: SM_Prop_Hemp_01_L
   m_TagString: Untagged
@@ -110,30 +109,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.80419636, y: 1.2318245, z: 0.8329394}
   m_Center: {x: 0.001144141, y: 0.61591226, z: 0.042481735}
---- !u!54 &2550548821203362416
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978200287030232}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0

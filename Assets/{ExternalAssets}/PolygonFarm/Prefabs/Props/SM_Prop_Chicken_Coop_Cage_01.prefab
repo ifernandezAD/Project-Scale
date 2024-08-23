@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4691361886534474}
   - component: {fileID: 33744471944825568}
   - component: {fileID: 23876411289502976}
-  - component: {fileID: 64217526553959106}
-  - component: {fileID: 1184079313465863606}
+  - component: {fileID: 5255266566207547238}
   m_Layer: 3
   m_Name: SM_Prop_Chicken_Coop_Cage_01
   m_TagString: Untagged
@@ -90,8 +89,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &64217526553959106
-MeshCollider:
+--- !u!65 &5255266566207547238
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,37 +107,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43993846582888846, guid: dd4a830d167cde4449d3a4e8adb1c269, type: 2}
---- !u!54 &1184079313465863606
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507452229962122}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  serializedVersion: 3
+  m_Size: {x: 1.6750576, y: 1.5063035, z: 3.3749952}
+  m_Center: {x: 0, y: 0.7531518, z: 0.000000059604645}
 --- !u!1 &1551158503910372
 GameObject:
   m_ObjectHideFlags: 0

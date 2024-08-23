@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4138704926113294}
   - component: {fileID: 33638517535229174}
   - component: {fileID: 23300662999926548}
-  - component: {fileID: -3394093235025594677}
-  m_Layer: 0
+  - component: {fileID: 5588710135597402309}
+  m_Layer: 3
   m_Name: SM_Env_Vege_Rows_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &-3394093235025594677
+--- !u!65 &5588710135597402309
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +104,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.52652, y: 0.42206013, z: 4.5835156}
   m_Center: {x: -2.5144987, y: 0.24676985, z: 2.413647}
