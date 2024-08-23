@@ -40,35 +40,36 @@ public class BlackHoleBehaviour : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, absorptionRadius);
     }
 
-    void AbsorbObjects()
+void AbsorbObjects()
+{
+    float effectiveGravitationalRange = gravitationalRange + (absorptionRadius - initialRadius) * rangeGrowthFactor;
+    Collider[] objectsToAbsorb = Physics.OverlapSphere(transform.position, absorptionRadius * effectiveGravitationalRange, absorbableLayer);
+
+    foreach (Collider obj in objectsToAbsorb)
     {
-        float effectiveGravitationalRange = gravitationalRange + (absorptionRadius - initialRadius) * rangeGrowthFactor;
-        Collider[] objectsToAbsorb = Physics.OverlapSphere(transform.position, absorptionRadius * effectiveGravitationalRange, absorbableLayer);
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
 
-        foreach (Collider obj in objectsToAbsorb)
+        if (rb == null)
         {
-            Rigidbody rb = obj.GetComponent<Rigidbody>();
+            rb = obj.gameObject.AddComponent<Rigidbody>();
+        }
 
-            if (rb != null)
-            {
-                rb.constraints = RigidbodyConstraints.None;
+        Vector3 directionToBlackHole = (transform.position - obj.transform.position).normalized;
+        float distanceToBlackHole = Vector3.Distance(transform.position, obj.transform.position);
 
-                Vector3 directionToBlackHole = (transform.position - obj.transform.position).normalized;
-                float distanceToBlackHole = Vector3.Distance(transform.position, obj.transform.position);
+        float effectiveGravitationalPull = gravitationalPull * (absorptionRadius / initialRadius);
+        float forceMagnitude = effectiveGravitationalPull / distanceToBlackHole;
+        rb.AddForce(directionToBlackHole * forceMagnitude, ForceMode.Acceleration);
 
-                float effectiveGravitationalPull = gravitationalPull * (absorptionRadius / initialRadius);
-                float forceMagnitude = effectiveGravitationalPull / distanceToBlackHole;
-                rb.AddForce(directionToBlackHole * forceMagnitude, ForceMode.Acceleration);
-
-                if (distanceToBlackHole < destructionDistanceThreshold)
-                {
-                    Destroy(obj.gameObject);
-                    absorptionRadius += growthFactor;
-                    UpdateBlackHoleSize();
-                }
-            }
+        if (distanceToBlackHole < destructionDistanceThreshold)
+        {
+            Destroy(obj.gameObject);
+            absorptionRadius += growthFactor;
+            UpdateBlackHoleSize();
         }
     }
+}
+
 
     void UpdateBlackHoleSize()
     {
