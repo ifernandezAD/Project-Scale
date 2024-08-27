@@ -7,10 +7,6 @@
 - [Features](#features)
 - [Controls](#controls)
 - [Technical Details](#technical-details)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [License](#license)
 
 ## Gameplay
 
