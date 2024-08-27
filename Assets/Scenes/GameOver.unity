@@ -209,22 +209,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1069099358}
   dialogueLines:
-  - '[Oh, really? You let the clock run out? The Void is still hungry, and you just...
-    failed. What a cosmic disappointment.]
+  - 'Oh, really? You let the clock run out? The Void is still hungry, and you just...
+    failed. What a cosmic disappointment.
 
 '
-  - "[The farm is still standing, mocking us with its untouched crops and livestock.
+  - "The farm is still standing, mocking us with its untouched crops and livestock.
     You had one job\u2014ONE JOB\u2014and now we\u2019re left with a ravenous Void
-    and nothing to show for it.]"
-  - '[How hard is it to devour a simple farm? The Void demands consumption, not excuses.
-    But here we are, empty-handed and embarrassed.]'
-  - "[The Void is displeased. If it could frown, it would. You\u2019ve let down an
+    and nothing to show for it."
+  - How hard is it to devour a simple farm? The Void demands consumption, not excuses.
+    But here we are, empty-handed and embarrassed.
+  - "The Void is displeased. If it could frown, it would. You\u2019ve let down an
     endless abyss, and that\u2019s no small feat. Congratulations, you\u2019ve achieved
-    a new low.]"
-  - "[No cosmic burp of satisfaction for you, just the cold, empty silence of failure.
-    The universe remains full, and that\u2019s entirely your fault.]\r\n\n"
-  - "[Maybe next time, you\u2019ll manage to feed the Void properly. But for now,
-    you\u2019re dismissed. Try not to fail so spectacularly next time.]"
+    a new low."
+  - "No cosmic burp of satisfaction for you, just the cold, empty silence of failure.
+    The universe remains full, and that\u2019s entirely your fault.\r\n\n"
+  - "Maybe next time, you\u2019ll manage to feed the Void properly. But for now,
+    you\u2019re dismissed. Try not to fail so spectacularly next time."
   typingSpeed: 0.05
 --- !u!1 &425224625
 GameObject:

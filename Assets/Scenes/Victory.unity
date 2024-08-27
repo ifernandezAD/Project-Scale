@@ -209,20 +209,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1069099358}
   dialogueLines:
-  - '[Well, well, well... Would you look at that! The Void is stuffed, and the farm?
-    Gone without a trace. You really outdid yourself, cosmic gourmand!]'
-  - "[I mean, who knew swallowing an entire farm could be so... satisfying? The trees,
+  - Well, well, well... Would you look at that! The Void is stuffed, and the farm?
+    Gone without a trace. You really outdid yourself, cosmic gourmand!
+  - "I mean, who knew swallowing an entire farm could be so... satisfying? The trees,
     the crops, the barn\u2014poof! Gone, like they never existed. A true culinary
-    masterpiece.]\r"
-  - "[The Void burps in satisfaction. What? It\u2019s a compliment where we come
-    from. Trust me, it\u2019s not easy to impress an endless, all-consuming abyss.]"
-  - "[You\u2019ve successfully completed your mission, and the universe is now just
+    masterpiece.\r"
+  - "The Void burps in satisfaction. What? It\u2019s a compliment where we come from.
+    Trust me, it\u2019s not easy to impress an endless, all-consuming abyss."
+  - "You\u2019ve successfully completed your mission, and the universe is now just
     a little bit emptier. Congratulations, you\u2019ve proven yourself as a true
-    connoisseur of chaos.]"
-  - "[But alas, all good things must come to an end. And so, it\u2019s time for you
-    to exit this plane of existence... or at least, exit the game. Thanks for playing!]"
-  - "[Don\u2019t worry, the Void will be here if you ever want to feed it again.
-    Until then, farewell, and may your cosmic appetite never wane!]\n"
+    connoisseur of chaos."
+  - "But alas, all good things must come to an end. And so, it\u2019s time for you
+    to exit this plane of existence... or at least, exit the game. Thanks for playing!"
+  - "Don\u2019t worry, the Void will be here if you ever want to feed it again. Until
+    then, farewell, and may your cosmic appetite never wane!\n"
   typingSpeed: 0.05
 --- !u!1 &425224625
 GameObject:

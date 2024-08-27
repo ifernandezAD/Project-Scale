@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4046666321915692}
   - component: {fileID: 33929003305455204}
   - component: {fileID: 23058980784610650}
+  - component: {fileID: 2522343678754050299}
   m_Layer: 3
   m_Name: SM_Env_Tree_Apricot_Grown_01
   m_TagString: Untagged
@@ -86,3 +87,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2522343678754050299
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624734060532954}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.1250157, y: 4.867985, z: 3.1246002}
+  m_Center: {x: -0.20446105, y: 2.1098356, z: -0.42305547}

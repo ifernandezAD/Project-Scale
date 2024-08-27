@@ -209,27 +209,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1069099358}
   dialogueLines:
-  - "[Press the spacebar to advance through the dialogue. Trust me, it\u2019s going
-    to be worth it.]\r\n"
-  - "[Ah, finally! A fresh mind to torment\u2014err, guide. Welcome, traveler, to
-    the infinite void. Don\u2019t worry, it\u2019s not as empty as it looks... yet.]\r\n"
-  - "[You see, there\u2019s a bit of a problem. The Void is feeling rather peckish
-    today. And when the Void is hungry, well... things tend to disappear.]\r\n"
-  - "[Today\u2019s menu? A nice, juicy farm. Whose farm, you ask? Does it really
-    matter? The Void\u2019s appetite is indiscriminate. Think of it as a cosmic recycling
-    effort!]\r"
-  - "[Your mission, should you choose to accept it (not that you have a choice),
-    is to feed the Void. You must grow the Black Hole to a certain size in under
-    3 minutes. That\u2019s 180 seconds, if you prefer.]"
-  - '[How, you ask? Simple! Use the WASD keys to move around. Think of them as the
+  - "Press the spacebar to advance through the dialogue. Trust me, it\u2019s going
+    to be worth it.\r\n"
+  - "Ah, finally! A fresh mind to torment\u2014err, guide. Welcome, traveler, to
+    the infinite void. Don\u2019t worry, it\u2019s not as empty as it looks... yet.\r\n"
+  - "You see, there\u2019s a bit of a problem. The Void is feeling rather peckish
+    today. And when the Void is hungry, well... things tend to disappear.\r\n"
+  - "Today\u2019s menu? A nice, juicy farm. Whose farm, you ask? Does it really matter?
+    The Void\u2019s appetite is indiscriminate. Think of it as a cosmic recycling
+    effort!\r"
+  - "Your mission, should you choose to accept it (not that you have a choice), is
+    to feed the Void. You must grow the Black Hole to a certain size in under 3 minutes.
+    That\u2019s 180 seconds, if you prefer."
+  - How, you ask? Simple! Use the WASD keys to move around. Think of them as the
     cosmic joystick. The Q and E keys? Those are for ascending and descending, because
-    even the Void enjoys a little verticality.]'
-  - "[Just remember, time is ticking. If the Black Hole doesn\u2019t grow big enough
-    in time... well, let's just say it won\u2019t be the farm that disappears next.]"
-  - "[Just remember, time is ticking. If the Black Hole doesn\u2019t grow big enough
-    in time... well, let's just say it won\u2019t be the farm that disappears next.]"
-  - "[So, get ready. Make the Void proud. Or don\u2019t. Either way, it\u2019ll be
-    entertaining. Now, press spacebar and let\u2019s get started!]"
+    even the Void enjoys a little verticality.
+  - "Just remember, time is ticking. If the Black Hole doesn\u2019t grow big enough
+    in time... well, let's just say it won\u2019t be the farm that disappears next."
+  - "Just remember, time is ticking. If the Black Hole doesn\u2019t grow big enough
+    in time... well, let's just say it won\u2019t be the farm that disappears next."
+  - "So, get ready. Make the Void proud. Or don\u2019t. Either way, it\u2019ll be
+    entertaining. Now, press spacebar and let\u2019s get started!"
   typingSpeed: 0.05
 --- !u!1 &425224625
 GameObject:
